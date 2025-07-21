@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <style>
+    body { margin: 0;
+           font-family: 'Prompt', sans-serif;
+           background: linear-gradient(135deg, #b98585, #c9b3b3);
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh; }
+    .card { background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 320px; }
+    .card img { width: 100%; height: auto; object-fit: cover; }
+    .info { padding: 1rem; text-align: left; }
+    .info h2 { margin: 0.5rem 0 0.5rem; font-size: 1.5rem; color: #333; text-align: center; }
+    .info p { margin: 0.3rem 0; color: #555; font-size: 1rem; }
+    .background-control { position: fixed; top: 20px; right: 20px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="myphoto.png" alt="Profile Picture" id="profile-img">
+    <div class="info">
+      <h2 id="fullname">นางสาวชนาภัทร ฝ้ายเพ็ชร์</h2>
+      <p id="nickname">มีน: </p>
+      <p id="school">โรงเรียนภูเก็ตไทยหัวอาเซียนวิทยา: </p>
+      <p id="level">มัธยมศึกษาปีที่4: </p>
+    </div>
+  </div>
+  <div class="background-control">
+    <input type="color" id="bg-color-picker" value="#f0f0f0" />
+    <label for="bg-color-picker">BG color</label>
+  </div>
+  <script>
+    document.getElementById('bg-color-picker').addEventListener('input', function() {
+      document.body.style.background = this.value;
+    });
+  </script>
+</body>
+</html>
+
+
